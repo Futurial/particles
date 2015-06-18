@@ -9,7 +9,6 @@ var particle = {
     y          : 400,
     v          : [0, 0],
     a          : [-3, -3]
-}
 
     move       : function () {
                     this.x += this.v[0] / cps;
