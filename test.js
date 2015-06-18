@@ -2,13 +2,14 @@ var c                = document.getElementById("myCanvas"),
     ctx              = c.getContext("2d"),
     fps              = 50,
     impactPrcLoss    = 10,
-    cps       = 100 // calculations per second;
+    cps              = 100 // calculations per second;
 
 var particle = {
     x          : 400,
     y          : 400,
     v          : [0, 0],
-    a          : [-3, -3],
+    a          : [-3, -3]
+}
 
     move       : function () {
                     this.x += this.v[0] / cps;
