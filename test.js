@@ -1,10 +1,10 @@
 var c                = document.getElementById("myCanvas"),
     ctx              = c.getContext("2d"),
-    fps              = 15,
+    fps              = 60,
     impactPrcLoss    = 10,
-    cps              = 20, // calculations per second
+    cps              = 60, // calculations per second
     particleSize     = 2,
-    particleAmount   = 1000;
+    particleAmount   = 10000;
 
 function Particle(x, y, vx, vy) {
     this.x = x;
@@ -12,8 +12,8 @@ function Particle(x, y, vx, vy) {
     this.v = {
         x:vx,
         y:vy
-    }
-};
+    };
+}
 
 Particle.prototype.a = {
     x:0,
@@ -46,12 +46,12 @@ Particle.prototype.move = function () {
             this.y = 0;
             this.v.y *= impactCoefficient;
         }
-}
+};
 
 Particle.prototype.accelerate = function () {
     this.v.x += this.a.x / cps;
     this.v.y += this.a.y / cps;
-}
+};
 
 var particles = [];
 for (var i = 0; i < particleAmount; i++) {
