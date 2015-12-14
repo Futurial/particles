@@ -4,7 +4,7 @@ var c                = document.getElementById("myCanvas"),
     impactPrcLoss    = 10,
     cps              = 60, // calculations per second
     particleSize     = 2,
-    particleAmount   = 10000;
+    particleAmount   = 100;
 
 function Particle(x, y, vx, vy) {
     this.x = x;
@@ -16,7 +16,7 @@ function Particle(x, y, vx, vy) {
 }
 
 Particle.prototype.a = {
-    x:0,
+    x:50,
     y:100
 };
 
